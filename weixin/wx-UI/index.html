@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<audio src="music/Tanaki Alison - One Wish.mp3" autoplay="autoplay" preload loop="loop" id="apple"></audio>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   	
+    </script>
+    <link rel="stylesheet" type="text/css" href="src/css/mian.css"/>
+    <link rel="stylesheet" type="text/css" href="src/lib/alert/alert.css"/>
+    <link rel="stylesheet" type="text/css" href="src/lib/swiper/swiper.css"/>
+	<link rel="stylesheet" type="text/css" href="src/lib/swiper/animate.css"/>
+</head>
+<body>
+	
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!--第一页-->
+			<div class="swiper-slide swiper-out swiper-one" >
+				<img src="img/UI-01/UI01_02.png" />
+				<img src="img/UI-01/UI01_01.png"/>
+				<img src="img/UI-01/zi.png"/>
+			</div> 
+			
+			<!--第二页-->
+			<!--class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="1s" swiper-animate-delay="0.3s"-->
+			<div class="swiper-slide swiper-out swiper-two">
+				<img src="img/UI-01/UI01_01.png"/>
+				<img src="img/UI-02/UI02_02.png" class="ani slogn" swiper-animate-effect="slideInRight" swiper-animate-duration=".5s" swiper-animate-delay="0s" />
+				<img src="img/UI-02/UI02_04.png" class="alert-btn pageOneBtn ani" swiper-animate-effect=" flash" swiper-animate-duration="4s" swiper-animate-delay="0"/>
+				<img src="img/UI-02/UI02_06.png" class="middle"/>
+				<div class="circle big-cir"></div>
+				<div class="circle small-cir"></div>	
+			</div>
+			<!--第三页-->
+			<div class="swiper-slide swiper-out">
+				<img src="img/UI-01/UI01_01.png"/>
+				<img src="img/UI-02/UI02_zi.png" class="ani slogn" swiper-animate-effect="slideInRight" swiper-animate-duration=".5s" swiper-animate-delay="0s" />
+				<img src="img/UI-02/UI02_04.png" class=" alert-btn ani pageTwoBtn" swiper-animate-effect=" flash" swiper-animate-duration="4s" swiper-animate-delay="0"/>
+				<img src="img/UI-03/UI03_06.png" class="middle"/>
+				<div class="circle big-cir"></div>
+				<div class="circle small-cir"></div>	
+			</div>
+			<!--第四页-->
+			<div class="swiper-slide swiper-out">
+				<img src="img/UI-01/UI01_01.png"/>
+				<img src="img/UI-04/UI04_zi.png" class="ani slogn" swiper-animate-effect="slideInRight" swiper-animate-duration=".5s" swiper-animate-delay="0s" />
+				<img src="img/UI-02/UI02_04.png" class="alert-btn ani pageThreeBtn" swiper-animate-effect=" flash" swiper-animate-duration="4s" swiper-animate-delay="0"/>
+				<img src="img/UI-04/UI04_08.png" class="middle"/>
+				<div class="circle big-cir"></div>
+				<div class="circle small-cir"></div>	
+			</div>
+			<!--第五页-->
+			<div class="swiper-slide swiper-out">
+				<img src="img/UI-01/UI01_01.png"/>
+				<img src="img/UI-05/UI05_zi.png" class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration=".5s" swiper-animate-delay="0s" />
+				<img src="img/UI-05/UI05_07.png" class="alert-btn ani pageFiveBtn" swiper-animate-effect="flash" swiper-animate-duration="4s" swiper-animate-delay="0"/>
+				<img src="img/UI-05/UI05_06.png" class="middle"/>
+				<div class="circle big-cir"></div>
+				<div class="circle small-cir"></div>	
+				
+			</div>
+			<!--第六页-->
+			<div class="swiper-slide swiper-out swiper-six" >
+				<img src="img/UI-06/UI06_01.png"/>
+				<img src="img/UI-06/UI06_02.png"/>
+				<img src="img/UI-06/UI06_03.png"/>
+				<img src="img/UI-06/UI06_05.png"/>
+				<img src="img/UI-06/UI06_06.png"/>
+			</div>
+		</div>
+		<div class="music" loop style="background:url(img/UI-01/music.png); background-size:cover;" ></div>
+		<img src="img/UI-03/qf_01.png" class="mountenOne mounten"/>
+		<img src="img/UI-03/qf_02.png" class="mountenTwo mounten"/>
+		<img src="img/UI-03/qf_03.png" class="mountenThree mounten" />
+		<img src="img/UI-03/qf_04.png" class="mountenFour mounten "/>
+	</div>
+</body>
+	<script type="text/javascript" src="src/lib/jquery-1.9.0.min.js" ></script>
+	<script type="text/javascript" src="src/lib/swiper/swiper.js" ></script>
+	<script type="text/javascript" src="src/lib/swiper/animate.js" ></script>
+	<script type="text/javascript" src="src/lib/alert/alert.js" ></script>
+	<script type="text/javascript" src="src/js/page2-alert.js" ></script>
+	<script type="text/javascript" src="src/js/page3-alert.js" ></script>
+	<script type="text/javascript" src="src/js/page4-alert.js" ></script>
+	<script type="text/javascript" src="src/js/page5-alert.js" ></script>
+	
+	<script type="text/javascript">
+		//最外层滑动
+		var mySwiper = new Swiper('.swiper-container' , {
+			observer: true,//修改swiper自己或子元素时，自动初始化swiper  
+       		observeParents: true,//修改swiper的父元素时，自动初始化swiper  
+			resistanceRatio:0,
+			onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+		    swiperAnimateCache(swiper); //隐藏动画元素 
+		    swiperAnimate(swiper); //初始化完成开始动画
+		 },   
+		  onSlideChangeEnd: function(swiper){ 
+		    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+		  	if(mySwiper.realIndex == 5){
+		      for(var i = 0 ; i<4 ; i++){
+		      	document.getElementsByClassName('mounten')[i].style.display='none'
+		      }
+		  	}else{
+		  	 for(var i = 0 ; i<4 ; i++){
+		      	document.getElementsByClassName('mounten')[i].style.display='block'
+		      }	
+		  	}
+		  },
+		})
+		
+			//音乐播放	
+	var onoff = true
+	var music = document.getElementsByClassName("music")[0]
+	var ado = document.getElementsByTagName('audio')[0]
+
+	//苹果禁止了自动播放
+	
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+    }, false);
+}
+audioAutoPlay('apple');
+
+	music.onclick = function() {
+		if(onoff) {
+			music.style.animationPlayState = "paused"
+			music.style.webkitAnimationPlayState = "paused"
+			ado.pause()
+		} else {
+			music.style.animationPlayState = "paused"
+			music.style.webkitAnimationPlayState = "running"
+			ado.play()
+		}
+		onoff = !onoff
+	}
+	</script>
+</html>
